@@ -1,3 +1,18 @@
+.fpl-logo{
+    height: 80px;padding-left: 15px;padding-top: 12px;
+}
+
+.fpl-navbar{
+    background-color:rgb(227, 238, 174);border-bottom-color: rgb(227, 238, 174);
+}
+.fpl-navbar-first{
+    padding-left: 200px
+}
+
+.fpl-content{
+
+   padding-left: 50px;
+}
 .fpl-app-tbl,
 .fpl-app-tbl tr,
 .fpl-app-tbl tbody td,
