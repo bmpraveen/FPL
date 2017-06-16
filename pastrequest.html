@@ -17,8 +17,8 @@
 
 <div class="row fpl-logo">
     <div class="col-md-12">
-<img src="images/fpl_logo.png"/>
-</div>
+      <img src="images/fpl_logo.png"/>
+    </div>
 </div>
 
 <div class="row" >
@@ -44,119 +44,106 @@
 <div class="row">
    
     <div class="col-md-12 fpl-content">
-    <h3>Past Requests</h3>
+    <span class="fpl-pagetitle">Past Requests</span>
     <div class="col-md-12">
          <form class="form-inline" role="form" style="padding-top: 15px;padding-bottom: 15px;">
                         <div class="form-group" style="padding-right: 50px">   
-                        <label class="filter-col" style="margin-right:0;" for="pref-perpage" style="padding-right: 20px" >Filters:</label>
+                        <label class="filter-col fpl-title" style="margin-right:0;" for="pref-perpage" style="padding-right: 20px" >Filters:</label>
                         </div>
-                        <div class="form-group" style="padding-right: 50px">                          
+                        <div class="form-group fpl-title" style="padding-right: 50px">                          
                            
-                            <label class="filter-col" style="margin-right:0;" for="pref-perpage">Type</label>
-                            <select id="pref-perpage" class="form-control" style="width: 200px;">
+                            <label class="filter-col fpl-title" style="margin-right:0;" for="pref-perpage">Application Group</label>
+                            <select id="pref-perpage" class="form-control fpl-title" style="width: 200px;">
                                 <option value="2">All</option>                            
                             </select>                                
                         </div> <!-- form group [rows] -->                       
-                        <div class="form-group">
-                            <label class="filter-col" style="margin-right:0;" for="pref-orderby">Function</label>
-                            <select id="pref-orderby" class="form-control" style="width: 200px;">
+                        <div class="form-group fpl-title">
+                            <label class="filter-col fpl-title" style="margin-right:0;" for="pref-orderby">Function</label>
+                            <select id="pref-orderby " class="form-control fpl-title" style="width: 200px;">
                                 <option>All</option>
                             </select>                                
                         </div> <!-- form group [order by] -->                       
         </form>
 </div> 
-    <table class="table fpl-app-tbl"  border="0">
+    <table class="table fpl-app-tbl table-hover"  border="0">
   <thead>
     <tr>     
         <th>Server Name</th>
-        <th>VRA ID</th>
+        <th>Type</th>
         <th>Application</th>
-        <th>Date Requested</th>
-        <th>Cost</th>
-        <th></th>
+        <th>VRA ID</th>
+        <th>Status</th>
+        <th>Date Submitted</th>
+        <th>Cost</th>       
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>GSOX7364</td>
-       <td>XXXXXXXXXX</td>
+      <td><a href="#">GSOX7364</a></td>
+      <td>Production</td>       
       <td>[application Name]</td>
+      <td>XXXXXXXXXX</td>
+      <td>Pending</td>
       <td>Yesterday</td>
-      <td>$380</td>
-      <td><i class="glyphicon glyphicon-file"></i></td>
+      <td>$380</td>    
     </tr>
-    <tr>     
+    <tr>   
      
-      <td>JBXSA9999</td>
-      <td>XXXXXXXXXX</td>
+      <td><a href="#">JBXSA9999</a></td>
+      <td>Testing</td>  
       <td>[application Name]</td>
+      <td>XXXXXXXXXX</td>
+       <td>Approved</td>
       <td>Two days ago</td>
-      <td>$785</td>
-      <td><i class="glyphicon glyphicon-file"></i></td>
+      <td>$785</td>      
     </tr>
-    <tr>    
-      
-      <td>ORLSA1999</td>
-      <td>XXXXXXXXXX</td>
-      <td>[application Name]</td>
-      <td>June 6</td>
-      <td>$590</td>
-      <td><i class="glyphicon glyphicon-file"></i></td>
+    <tr>
+      <td><a href="#">ORLSA1999</a></td>
+        <td>Development</td> 
+        <td>[application Name]</td>
+        <td>XXXXXXXXXX</td>
+        <td>Rejected</td>
+        <td>June 6</td>
+        <td>$590</td>
     </tr>
-    <tr>    
-     
-      <td>GOXSD1234</td>
-      <td>XXXXXXXXXX</td>
-      <td>[application Name]</td>
-      <td>June 2</td>
-      <td>$1200</td>
-      <td><i class="glyphicon glyphicon-file"></i></td>
+    <tr>
+        <td><a href="#">GOXSD1234</a></td>
+        <td>Disaster Recovery</td>      
+        <td>[application Name]</td>
+        <td>XXXXXXXXXX</td>
+        <td>Approved</td>
+        <td>June 2</td>
+        <td>$1200</td>
     </tr>
-    <tr>    
-    
-      <td>GSOX7364</td>
-      <td>XXXXXXXXXX</td>
+    <tr> 
+      <td><a href="#">GSOX7364</a></td>
+      <td>Development</td> 
       <td>[application Name]</td>
+      <td>XXXXXXXXXX</td>
+      <td>Approved</td>
       <td>Yesterday</td>
       <td>$480</td>
-      <td><i class="glyphicon glyphicon-file"></i></td>
     </tr>
-    <tr>    
-     
+    <tr> 
       <td>JBXSA9999</td>
-      <td>XXXXXXXXXX</td>
+     <td>Production</td>  
       <td>[application Name]</td>
+       <td>XXXXXXXXXX</td>
+       <td>Rejected</td>
       <td>Two days ago</td>
       <td>$790</td>
-      <td><i class="glyphicon glyphicon-file"></i></td>
     </tr>
     <tr>    
     
       <td>ORLSA1999</td>
-      <td>XXXXXXXXXX</td>
-      <td>[application Name]</td>
+      <td>Testing</td> 
+       <td>[application Name]</td>
+      <td>XXXXXXXXXX</td>     
+       <td>Approved</td>
       <td>June 6</td>
       <td>$590</td>
-      <td><i class="glyphicon glyphicon-file"></i></td>
     </tr>
-    <tr>    
-     
-      <td>ORLSA1999</td>
-      <td>XXXXXXXXXX</td>
-      <td>[application Name]</td>
-      <td>June 6</td>
-      <td>$590</td>
-      <td><i class="glyphicon glyphicon-file"></i></td>
-    </tr>
-    <tr>    
-    
-      <td>JBXSA9999</td>
-      <td>XXXXXXXXXX</td>
-      <td>[application Name]</td>
-      <td>Two days ago</td>
-      <td>$790</td>
-      <td><i class="glyphicon glyphicon-file"></i></td>
-    </tr>
+   
   </tbody>
 </table>
     </div> 

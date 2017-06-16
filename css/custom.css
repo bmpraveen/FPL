@@ -1,9 +1,17 @@
 .fpl-logo{
     height: 80px;padding-left: 15px;padding-top: 12px;
 }
+.fpl-logo img{
+    width: 54px;
+    height: 49px;
+}
 
+.fpl-container .row{
+    margin-right: 0; 
+     margin-left: 0;
+}
 .fpl-navbar{
-    background-color:rgb(227, 238, 174);border-bottom-color: rgb(227, 238, 174);
+    background-color:rgb(227, 240, 194);border-bottom-color: rgb(227, 240, 193);
 }
 .fpl-navbar-first{
     padding-left: 200px
@@ -13,6 +21,21 @@
 
    padding-left: 50px;
 }
+
+.fpl-title{
+    font-size:14px;
+    color:rgb(102, 102, 102);
+    font-style: normal;
+    font-weight: normal !important;
+}
+
+.fpl-pagetitle{
+color:rgb(102, 102, 102);
+font-size:26px;
+font-style:normal;
+    padding-left: 10px;
+}
+
 .fpl-app-tbl,
 .fpl-app-tbl tr,
 .fpl-app-tbl tbody td,
@@ -21,16 +44,42 @@
 	border: none !important;
 }
 
+.fpl-app-tbl td a{
+  color:   rgb(51, 51, 51);
+}
+.fpl-app-tbl th{
+   color:  rgb(134, 134, 134);
+   font-size: 14px;
+   font-style: normal;
+   font-weight: normal;
+}
+
 .pagination li a
 {
     color: black !important;
+     margin-left: 0;
 
 }
+
+.pagination .active  a{
+    background-color: white;
+    font-weight: bold;
+}
+
+.pagination a:hover:not(.active) {background-color: white; font-weight: bold;}
+
+
 .fpl-page-noborder{
     border: 0 !important;
+    
 }
 
-.fpl-nav-item{
-    font-weight: bold !important;
+.fpl-nav-item{   
+   font-size: 16px;
     color: black !important;
 }
+body{
+font-family:  SegoeUI, "Segoe UI Normal", "Segoe UI";
+
+}
+

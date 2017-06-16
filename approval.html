@@ -6,18 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+      <script src="css/dataTables.bootstrap.css"></script>
+ 
      <script src="js/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+       <script src="js/dataTables.bootstrap.min.js"></script>
+   
 </head>
 <body>
 
-<div>
+<div class="fpl-container">
 
 <div class="row fpl-logo">
     <div class="col-md-12">
-<img src="images/fpl_logo.png"/>
+        <img src="images/fpl_logo.png"/>
 </div>
 </div>
 
@@ -44,101 +49,262 @@
 <div class="row" >
    
     <div class="col-md-12 fpl-content">
-    <h3>Approvals</h3>
-    <table class="table fpl-app-tbl"  border="0">
-  <thead>
-    <tr>
-      <th>Requestor</th>
-      <th>Server Name</th>
-      <th>Application</th>
-      <th>Date Requested</th>
-      <th>Cost</th>
-    </tr>
-  </thead>
-  <tbody>
+    <span class="fpl-pagetitle">Approvals</span>
+    <table id="example" class="table fpl-app-tbl table-hover" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Requestor</th>
+                <th>Application</th>
+                <th>Date Requested</th>
+                <th>Cost</th>               
+            </tr>
+        </thead>       
+        <tbody>
+             <tr>  
+                <td> <a href = "#">Mark Smith<a></td>
+                <td>[application Name]</td>
+                <td>Yesterday</td>
+                <td>$380</td>
+                
+            </tr>
     <tr>     
-      <td style="border: none;">Mark Smith</td>
-      <td style="border: none;">GSOX7364</td>
-      <td>[application Name]</td>
-      <td>Yesterday</td>
-      <td>$380</td>
-    </tr>
-    <tr>     
-     <td>Jen Thompson</td>
-      <td>JBXSA9999</td>
+      <td> <a href = "#">Jen Thompson<a></td>
       <td>[application Name]</td>
       <td>Two days ago</td>
       <td>$785</td>
     </tr>
     <tr>    
-      <td>Luis Gomez</td>
-      <td>ORLSA1999</td>
+      <td><a href = "#">Luis Gomez</a></td>
       <td>[application Name]</td>
       <td>June 6</td>
       <td>$590</td>
     </tr>
     <tr>    
-      <td>Sarah Jones</td>
-      <td>GOXSD1234</td>
+      <td><a href = "#">Sarah Jones</a></td>
       <td>[application Name]</td>
       <td>June 2</td>
       <td>$1200</td>
     </tr>
     <tr>    
-      <td>Mark Smith</td>
-      <td>GSOX7364</td>
+      <td><a href = "#">Mark Smith</a></td>
       <td>[application Name]</td>
       <td>Yesterday</td>
       <td>$480</td>
     </tr>
     <tr>    
-      <td>Chris Rogers</td>
-      <td>JBXSA9999</td>
+      <td><a href = "#">Chris Rogers</a></td>
       <td>[application Name]</td>
       <td>Two days ago</td>
       <td>$790</td>
     </tr>
     <tr>    
-      <td>Luis Gomez</td>
-      <td>ORLSA1999</td>
+      <td><a href = "#">Luis Gomez</a></td>
       <td>[application Name]</td>
       <td>June 6</td>
       <td>$590</td>
     </tr>
     <tr>    
-      <td>Luis Gomez</td>
-      <td>ORLSA1999</td>
+      <td><a href = "#">Luis Gomez</a></td>
       <td>[application Name]</td>
-      <td>June 6</td>
+      <td>May 6</td>
       <td>$590</td>
     </tr>
     <tr>    
-     <td>Chris Rogers</td>
-      <td>JBXSA9999</td>
+     <td><a href = "#">Chris Rogers</a></td>
       <td>[application Name]</td>
       <td>Two days ago</td>
       <td>$790</td>
     </tr>
-  </tbody>
-</table>
-    </div>
-    </div>
-            <ul class="pagination pull-left" style="padding-left: 30px">
-            <li class="disabled fpl-page-border"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-            <li class="active"><a href="#" class="fpl-page-noborder">1</a></li>
-            <li><a href="#" class="fpl-page-noborder">2</a></li>
-            <li><a href="#" class="fpl-page-noborder">3</a></li>
-            <li><a href="#" class="fpl-page-noborder">4</a></li>
-            <li><a href="#" class="fpl-page-noborder">5</a></li>
-            <li class="fpl-page-border"><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-            </ul>
+     <tr>  
+                <td> <a href = "#">Mark Smith<a></td>
+                <td>[application Name]</td>
+                <td>Yesterday</td>
+                <td>$380</td>
                 
-            </div>
+            </tr>
+    <tr>     
+      <td> <a href = "#">Jen Thompson<a></td>
+      <td>[application Name]</td>
+      <td>Two days ago</td>
+      <td>$785</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Luis Gomez</a></td>
+      <td>[application Name]</td>
+      <td>June 6</td>
+      <td>$590</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Sarah Jones</a></td>
+      <td>[application Name]</td>
+      <td>June 2</td>
+      <td>$1200</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Mark Smith</a></td>
+      <td>[application Name]</td>
+      <td>Yesterday</td>
+      <td>$480</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Chris Rogers</a></td>
+      <td>[application Name]</td>
+      <td>Two days ago</td>
+      <td>$790</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Luis Gomez</a></td>
+      <td>[application Name]</td>
+      <td>June 6</td>
+      <td>$590</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Luis Gomez</a></td>
+      <td>[application Name]</td>
+      <td>May 6</td>
+      <td>$590</td>
+    </tr>
+    <tr>    
+     <td><a href = "#">Chris Rogers</a></td>
+      <td>[application Name]</td>
+      <td>Two days ago</td>
+      <td>$790</td>
+    </tr> <tr>  
+                <td> <a href = "#">Mark Smith<a></td>
+                <td>[application Name]</td>
+                <td>Yesterday</td>
+                <td>$380</td>
+                
+            </tr>
+    <tr>     
+      <td> <a href = "#">Jen Thompson<a></td>
+      <td>[application Name]</td>
+      <td>Two days ago</td>
+      <td>$785</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Luis Gomez</a></td>
+      <td>[application Name]</td>
+      <td>June 6</td>
+      <td>$590</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Sarah Jones</a></td>
+      <td>[application Name]</td>
+      <td>June 2</td>
+      <td>$1200</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Mark Smith</a></td>
+      <td>[application Name]</td>
+      <td>Yesterday</td>
+      <td>$480</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Chris Rogers</a></td>
+      <td>[application Name]</td>
+      <td>Two days ago</td>
+      <td>$790</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Luis Gomez</a></td>
+      <td>[application Name]</td>
+      <td>June 6</td>
+      <td>$590</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Luis Gomez</a></td>
+      <td>[application Name]</td>
+      <td>May 6</td>
+      <td>$590</td>
+    </tr>
+    <tr>    
+     <td><a href = "#">Chris Rogers</a></td>
+      <td>[application Name]</td>
+      <td>Two days ago</td>
+      <td>$790</td>
+    </tr> <tr>  
+                <td> <a href = "#">Mark Smith<a></td>
+                <td>[application Name]</td>
+                <td>Yesterday</td>
+                <td>$380</td>
+                
+            </tr>
+    <tr>     
+      <td> <a href = "#">Jen Thompson<a></td>
+      <td>[application Name]</td>
+      <td>Two days ago</td>
+      <td>$785</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Luis Gomez</a></td>
+      <td>[application Name]</td>
+      <td>June 6</td>
+      <td>$590</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Sarah Jones</a></td>
+      <td>[application Name]</td>
+      <td>June 2</td>
+      <td>$1200</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Mark Smith</a></td>
+      <td>[application Name]</td>
+      <td>Yesterday</td>
+      <td>$480</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Chris Rogers</a></td>
+      <td>[application Name]</td>
+      <td>Two days ago</td>
+      <td>$790</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Luis Gomez</a></td>
+      <td>[application Name]</td>
+      <td>June 6</td>
+      <td>$590</td>
+    </tr>
+    <tr>    
+      <td><a href = "#">Luis Gomez</a></td>
+      <td>[application Name]</td>
+      <td>May 6</td>
+      <td>$590</td>
+    </tr>
+    <tr>    
+     <td><a href = "#">Chris Rogers</a></td>
+      <td>[application Name]</td>
+      <td>Two days ago</td>
+      <td>$790</td>
+    </tr>
+        </tbody>
+    </table>
+    </div>
    
 </div>
 
 
 </div>
+<script>$(document).ready(function() {
+    $('#example').DataTable({
+        "ordering": false,
+        "info":     false,
+        "searching": false,
+        "lengthChange": false
+      
+    });
+    $("#example_previous a")[0].innerHTML = "<";
+    $("#example_next a")[0].innerHTML = ">";
+
+   //  $(".clickable-row").click(function() {
+    //    location.href = ($(this).data("href"));
+    //});
+} );
+ 
+ 
+
+</script>
 </body>
 </html>
 
