@@ -2,16 +2,18 @@
     height: 80px;padding-left: 15px;padding-top: 12px;
 }
 .fpl-logo img{
-    width: 54px;
-    height: 49px;
+    width: 59px;
+    height: 59px;
 }
+
+
 
 .fpl-container .row{
     margin-right: 0; 
      margin-left: 0;
 }
 .fpl-navbar{
-    background-color:rgb(227, 240, 194);border-bottom-color: rgb(227, 240, 193);
+    background-color:#F0F2F3;border-bottom-color: #F0F2F3;
 }
 .fpl-navbar-first{
     padding-left: 200px
@@ -33,7 +35,7 @@
 color:rgb(102, 102, 102);
 font-size:26px;
 font-style:normal;
-    padding-left: 10px;
+    padding-left: 25px;
 }
 
 .fpl-app-tbl,
@@ -76,10 +78,32 @@ font-style:normal;
 
 .fpl-nav-item{   
    font-size: 16px;
-    color: black !important;
+    color:rgb(102, 102, 102);
+    font-family:ArialUnicodeMS, "Arial Unicode MS";
+    font-style:normal;
+    font-weight:normal;
+}
+
+.fpl-portaltitle
+{
+    font-family: ArialUnicodeMS, "Arial Unicode MS";
+    font-size:28px;
+    font-style:normal;
+    font-weight:normal;
+    color:rgb(102, 102, 102);
+    padding-left: 30px;
 }
 body{
 font-family:  SegoeUI, "Segoe UI Normal", "Segoe UI";
 
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #F0F2F4;
+;
+}
+
+tfoot {
+    display: table-header-group;
 }
 

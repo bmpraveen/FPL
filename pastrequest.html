@@ -4,42 +4,42 @@
   <title>Past Requests</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-     <link href="css/custom.css" rel="stylesheet">
-     <script src="js/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <script src="css/dataTables.bootstrap.css"></script> 
+    <script src="js/jquery.min.js"></script>    
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.min.js"></script>
 </head>
 <body>
 
 <div class="fpl-container">
 
-<div class="row fpl-logo">
-    <div class="col-md-12">
-      <img src="images/fpl_logo.png"/>
-    </div>
-</div>
-
-<div class="row" >
+<div class="fpl-logo">
+   
+    <img src="images/logo.png"/>
+    <span class="fpl-portaltitle">Server Request Portal</span>
  
-    <div class="col-md-12">
-    <nav class="navbar navbar-default fpl-navbar">
-    <div class="container-fluid">
-        <div class="navbar-header">
-      
-        </div>
-        <ul class="nav navbar-nav">
-        <li  class="fpl-navbar-first"><a href="#" class="fpl-nav-item">Home</a></li>
-        <li><a href="#" class="fpl-nav-item">Request a Server</a></li>
-        <li><a href="pastrequest.html" class="fpl-nav-item">Past Requests</a></li>
-        <li><a href="approval.html" class="fpl-nav-item">Approvals</a></li>
-        </ul>
-    </div>
-    </nav>
-    </div>
-    
 </div>
+ 
+<div>
+<nav class="navbar navbar-default fpl-navbar">
+<div class="container-fluid">
+    <div class="navbar-header">
+    
+    </div>
+    <ul class="nav navbar-nav">
+    <li  class="fpl-navbar-first"><a href="#" class="fpl-nav-item">Home</a></li>
+    <li><a href="#" class="fpl-nav-item">Request a Server</a></li>
+    <li><a href="pastrequest.html" class="fpl-nav-item">Past Requests</a></li>
+    <li><a href="approval.html" class="fpl-nav-item">Approvals</a></li>
+    </ul>
+</div>
+</nav>
+</div>
+    
+
 
 <div class="row">
    
@@ -47,7 +47,7 @@
     <span class="fpl-pagetitle">Past Requests</span>
     <div class="col-md-12">
          <form class="form-inline" role="form" style="padding-top: 15px;padding-bottom: 15px;">
-                        <div class="form-group" style="padding-right: 50px">   
+                        <div class="form-group" style="padding-right: 50px;    padding-left: 8px;">   
                         <label class="filter-col fpl-title" style="margin-right:0;" for="pref-perpage" style="padding-right: 20px" >Filters:</label>
                         </div>
                         <div class="form-group fpl-title" style="padding-right: 50px">                          
@@ -56,16 +56,11 @@
                             <select id="pref-perpage" class="form-control fpl-title" style="width: 200px;">
                                 <option value="2">All</option>                            
                             </select>                                
-                        </div> <!-- form group [rows] -->                       
-                        <div class="form-group fpl-title">
-                            <label class="filter-col fpl-title" style="margin-right:0;" for="pref-orderby">Function</label>
-                            <select id="pref-orderby " class="form-control fpl-title" style="width: 200px;">
-                                <option>All</option>
-                            </select>                                
-                        </div> <!-- form group [order by] -->                       
+                        </div> <!-- form group [rows] -->                      
+                                     
         </form>
 </div> 
-    <table class="table fpl-app-tbl table-hover"  border="0">
+<table id="fpl-pastreq-tbl" class="table fpl-app-tbl table-hover" cellspacing="0" width="100%">
   <thead>
     <tr>     
         <th>Server Name</th>
@@ -152,6 +147,28 @@
 
 
 </div>
+<script>
+$(document).ready(function() {
+    $('#fpl-pastreq-tbl').DataTable({       
+        "info":     false,
+        "searching": false,
+        "lengthChange": false
+      
+    });
+    //$("#example_previous a")[0].innerHTML = "<";
+    //$("#example_next a")[0].innerHTML = ">";
+
+   //  $(".clickable-row").click(function() {
+    //    location.href = ($(this).data("href"));
+    //});
+ $('#fpl-pastreq-tbl_paginate').remove().appendTo('#fpl-pastreq-tbl_wrapper');
+
+} );
+ 
+  
+
+</script>
 </body>
+
 </html>
 
