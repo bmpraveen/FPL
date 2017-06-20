@@ -147,140 +147,31 @@
       <td>Yesterday</td>
       <td>$480</td>
     </tr>
-    <tr>    
-      <td><a href = "#">Chris Rogers</a></td>
-      <td>[application Name]</td>
-      <td>Two days ago</td>
-      <td>$790</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Luis Gomez</a></td>
-      <td>[application Name]</td>
-      <td>June 6</td>
-      <td>$590</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Luis Gomez</a></td>
-      <td>[application Name]</td>
-      <td>May 6</td>
-      <td>$590</td>
-    </tr>
-    <tr>    
-     <td><a href = "#">Chris Rogers</a></td>
-      <td>[application Name]</td>
-      <td>Two days ago</td>
-      <td>$790</td>
-    </tr> <tr>  
-                <td> <a href = "#">Mark Smith<a></td>
-                <td>[application Name]</td>
-                <td>Yesterday</td>
-                <td>$380</td>
-                
-            </tr>
-    <tr>     
-      <td> <a href = "#">Jen Thompson<a></td>
-      <td>[application Name]</td>
-      <td>Two days ago</td>
-      <td>$785</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Luis Gomez</a></td>
-      <td>[application Name]</td>
-      <td>June 6</td>
-      <td>$590</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Sarah Jones</a></td>
-      <td>[application Name]</td>
-      <td>June 2</td>
-      <td>$1200</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Mark Smith</a></td>
-      <td>[application Name]</td>
-      <td>Yesterday</td>
-      <td>$480</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Chris Rogers</a></td>
-      <td>[application Name]</td>
-      <td>Two days ago</td>
-      <td>$790</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Luis Gomez</a></td>
-      <td>[application Name]</td>
-      <td>June 6</td>
-      <td>$590</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Luis Gomez</a></td>
-      <td>[application Name]</td>
-      <td>May 6</td>
-      <td>$590</td>
-    </tr>
-    <tr>    
-     <td><a href = "#">Chris Rogers</a></td>
-      <td>[application Name]</td>
-      <td>Two days ago</td>
-      <td>$790</td>
-    </tr> <tr>  
-                <td> <a href = "#">Mark Smith<a></td>
-                <td>[application Name]</td>
-                <td>Yesterday</td>
-                <td>$380</td>
-                
-            </tr>
-    <tr>     
-      <td> <a href = "#">Jen Thompson<a></td>
-      <td>[application Name]</td>
-      <td>Two days ago</td>
-      <td>$785</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Luis Gomez</a></td>
-      <td>[application Name]</td>
-      <td>June 6</td>
-      <td>$590</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Sarah Jones</a></td>
-      <td>[application Name]</td>
-      <td>June 2</td>
-      <td>$1200</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Mark Smith</a></td>
-      <td>[application Name]</td>
-      <td>Yesterday</td>
-      <td>$480</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Chris Rogers</a></td>
-      <td>[application Name]</td>
-      <td>Two days ago</td>
-      <td>$790</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Luis Gomez</a></td>
-      <td>[application Name]</td>
-      <td>June 6</td>
-      <td>$590</td>
-    </tr>
-    <tr>    
-      <td><a href = "#">Luis Gomez</a></td>
-      <td>[application Name]</td>
-      <td>May 6</td>
-      <td>$590</td>
-    </tr>
-    <tr>    
-     <td><a href = "#">Chris Rogers</a></td>
-      <td>[1]</td>
-      <td>Two days ago</td>
-      <td>$790</td>
-    </tr>
+  
         </tbody>
     </table>
+
+    <nav>
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link fpl-page-noborder" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">1</a></li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">2</a></li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">3</a></li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">4</a></li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">5</a></li>
+    <li class="page-item">
+      <a class="page-link fpl-page-noborder" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
     </div>
    
 </div>
@@ -290,24 +181,18 @@
 <script>
 $(document).ready(function() {
     $('#fpl-approval-tbl').DataTable( {
-       
+         
        "info":     false,
         "lengthChange": false,
        "searching": false,
-        "pageLength": 10,
-        "columnDefs": [ 
-       { targets: 0, searchable: false },
-        { targets: [1], searchable: false },
-        { targets: '_all', searchable: false }
-    ]
- 
-       
+    
+       "paging": false
     } );
 //$('#fpl-approval-tbl_paginate').remove().appendTo('#fpl-approval-tbl_wrapper');
     //$('#fpl-approval-tbl_filter').css('display','none');   
    //  //$("div.toolbar").html('<b>Custom tool bar! Text/images etc.</b>');
    // //$('#fpl-approval-tbl tfoot tr select').remove().appendTo('div.toolbar');  
-   $('#fpl-approval-tbl_paginate').addClass("pull-right");
+   //$('#fpl-approval-tbl_paginate').addClass("pull-right");
 } );
 
 

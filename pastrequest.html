@@ -141,6 +141,27 @@
    
   </tbody>
 </table>
+  <nav>
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link fpl-page-noborder" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">1</a></li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">2</a></li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">3</a></li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">4</a></li>
+    <li class="page-item"><a class="page-link fpl-page-noborder" href="#">5</a></li>
+    <li class="page-item">
+      <a class="page-link fpl-page-noborder" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
     </div> 
    
 </div>
@@ -152,7 +173,8 @@ $(document).ready(function() {
     $('#fpl-pastreq-tbl').DataTable({       
         "info":     false,
         "searching": false,
-        "lengthChange": false
+        "lengthChange": false,
+        "paging": false
       
     });
     //$("#example_previous a")[0].innerHTML = "<";
@@ -162,7 +184,7 @@ $(document).ready(function() {
     //    location.href = ($(this).data("href"));
     //});
  //$('#fpl-pastreq-tbl_paginate').remove().appendTo('#fpl-pastreq-tbl_wrapper');
-$('#fpl-pastreq-tbl_paginate').addClass("pull-right");
+    //$('#fpl-pastreq-tbl_paginate').addClass("pull-right");
 } );
  
   

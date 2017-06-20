@@ -107,3 +107,7 @@ tfoot {
     display: table-header-group;
 }
 
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
