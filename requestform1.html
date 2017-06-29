@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Past Requests</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <script src="css/dataTables.bootstrap.css"></script> 
+    <script src="js/jquery.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="fpl-container">
+
+<div class="fpl-logo">
+   
+    <img src="images/logo.png"/>
+    <span class="fpl-portaltitle">Server Request Portal</span>
+ 
+</div>
+ 
+<div>
+<nav class="navbar navbar-default fpl-navbar">
+<div class="container-fluid">
+    <div class="navbar-header">
+    
+    </div>
+    <ul class="nav navbar-nav">
+    <li  class="fpl-navbar-first"><a href="#" class="fpl-nav-item">Home</a></li>
+    <li><a href="#" class="fpl-nav-item">Request a Server</a></li>
+    <li><a href="pastrequest.html" class="fpl-nav-item">Past Requests</a></li>
+    <li><a href="approval.html" class="fpl-nav-item">Approvals</a></li>
+    </ul>
+</div>
+</nav>
+</div>
+    
+
+
+<div class="row">
+   
+    <div class="col-md-12 fpl-content">
+    <span class="fpl-pagetitle">Request a Server</span>
+    <div class="col-md-12">
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" class="clickable" href="#collapse1"><i class="glyphicon glyphicon-chevron-up"></i></a><Span>Compute</Span>
+                </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="row wrapper cf">
+                        <div class="col-md-10 content">
+                            <div id="fpl-platform-row" class="row">
+                                <div class="col-md-3">
+                                    <label for="sel1">Platform </label>
+                                    <div class="funkyradio">
+                                        <div class="funkyradio-primary">
+                                            <input type="radio" name="fpl-plat-radio" id="radio1" value="Virtual"/>
+                                            <label for="radio1">Virtual</label>
+                                        </div>
+                                        <div class="funkyradio-primary">
+                                            <input type="radio" name="fpl-plat-radio" id="radio2" value="Physical" />
+                                            <label for="radio2">Physical</label>
+                                        </div>                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fpl-os-row" class="row">
+                            <div class="col-md-3">
+                                    <label for="fpl-os-sel">Operating System </label>
+                                    <select class="form-control" id="fpl-os-sel" onchange="os_onchange()">
+                                            <option selected="" value="Select...">Select...</option>
+                                            <option value="AIX">AIX</option>
+                                            <option value="Microsoft Windows Server Standard">Microsoft Windows Server Standard</option>
+                                            <option value="Red Hat Enterprise Linux">Red Hat Enterprise Linux</option>
+                                            <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                <label for="fpl-os-selver">OS Version</label>
+                                <select class="form-control" id="fpl-os-selver" disabled="true" onchange="osversion_onchange()">
+                                    <option selected="" value="Select...">Select...</option>
+                                    <option value="Windows Server Standard 2008">Windows Server Standard 2008</option>
+                                    <option value="Windows Server Standard 2012">Windows Server Standard 2012</option>
+                                    <option value="Windows Server Standard 2016">Windows Server Standard 2016</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div id="fpl-vdir" class="row">
+                                <div class="col-md-3">
+                                <label for="fpl-vdata-sel">Virtual Datacenters</label>
+                                <select class="form-control" id="fpl-vdata-sel" onchange="virtualdatacenters_onchnage()">
+                                    <option selected="" value="Select...">Select...</option>
+                                    <option value="UCS Corporate V">UCS Corporate V</option>
+                                    <option value="UCS Corporate IV">UCS Corporate IV</option>
+                                    <option value="UCS SAP Farm">UCS SAP Farm</option>
+                                    <option value="UCS SAP Farm II">UCS SAP Farm II</option>
+                                    <option value="Other">Other</option>
+                                </select>                                                      
+                                </div>
+                            <div class="col-md-4">
+                                        <label for="fpl-vdnt-input" id="fpl-vd-lbl">Virtual Datacenter (if "Other" of auto-deployment not available)</label>
+                                        <input type="text" class="form-control" id="fpl-vdnt-input">                                    
+                            </div>
+                            </div>
+                            <div id="fpl-vlan-row" class="row">
+                                <div class="col-md-3">                              
+
+                                <label for="fpl-vlan-sel">Network (VLAN)</label>
+                                <select class="form-control" id="fpl-vlan-sel" onchange="nlan_onchnage()">
+                                        <option selected="" value="Select...">Select...</option>
+                                        <option value="JB-EMIT_DvSwitch_44 (Segment 155.109.44.x)">JB-EMIT_DvSwitch_44 (Segment 155.109.44.x)</option>
+                                        <option value="JB-EMIT_DvSwitch_52 (Segment 155.109.52.x)">JB-EMIT_DvSwitch_52 (Segment 155.109.52.x)</option>
+                                        <option value="JB-EMIT_DvSwitch_53 (Segment 155.109.53.x)">JB-EMIT_DvSwitch_53 (Segment 155.109.53.x)</option>
+                                        <option value="JB-EMIT_DvSwitch_109 (Segment 155.109.109.x)">JB-EMIT_DvSwitch_109 (Segment 155.109.109.x)</option>
+                                        <option value="JB-EMIT_DvSwitch_241 (Segment 155.109.241.x)">JB-EMIT_DvSwitch_241 (Segment 155.109.241.x)</option>
+                                        <option value="JB-EMIT_DvSwitch_242 (Segment 155.109.242.x)">JB-EMIT_DvSwitch_242 (Segment 155.109.242.x)</option>
+                                        <option value="Other">Other</option>
+                                </select>                        
+                                </div>
+                            <div class="col-md-3">                                     
+                                        <label for="fpl-segvlan-input" id="fpl-seg-lbl">Segment or VLAN (if "Other")</label>
+                                        <input type="text" class="form-control" id="fpl-segvlan-input">
+                            </div>
+                            </div>
+                            <div id="fpl-ip-row" class="row">
+                                    <div class="col-md-3">
+                                        <label for="fpl-ipadd-input">IP Address</label>
+                                        <input type="text" class="form-control" id="fpl-ipadd-input">
+
+                                        <label for="fpl-cpu-sel">CPU</label>
+                                        <select class="form-control" id="fpl-cpu-sel">
+                                                <option selected="" value="--">--</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="10">10</option>
+                                                <option value="12">12</option>
+                                                <option value="16">16</option>
+                                                <option value="24">24</option>
+                                                <option value="32">32</option>
+                                        </select> 
+
+                                        <label for="fpl-sys-lbl">System/Root Drive</label>
+                                        </br>
+                                        <label id="fpl-sys-lbl">80 GB</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="fpl-hnsn-input">Hostname/Server Name</label>
+                                        <input type="text" class="form-control" id="fpl-hnsn-input">
+                                        <label for="fpl-ram-sel">RAM (GB)</label>
+                                        <select class="form-control" id="fpl-ram-sel">
+                                            <option selected="" value="--">--</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="10">10</option>
+                                            <option value="12">12</option>
+                                            <option value="16">16</option>
+                                            <option value="18">18</option>
+                                            <option value="24">24</option>
+                                            <option value="32">32</option>
+                                            <option value="40">40</option>
+                                            <option value="48">48</option>
+                                            <option value="56">56</option>
+                                            <option value="64">64</option>
+                                            <option value="72">72</option>
+                                            <option value="80">80</option>
+                                            <option value="88">88</option>
+                                            <option value="96">96</option>
+                                            <option value="104">104</option>
+                                            <option value="112">112</option>
+                                            <option value="120">120</option>
+                                            <option value="128">128</option>     
+                                        </select> 
+                                    </div>
+                            </div>
+                            <div  id="fpl-disk-row"  class="row">
+                                <div class="col-md-3">
+                                    <div><lable>Are additional disks needed?</lable></div>
+                                    <div class="radio">
+                                    <label><input type="radio" name="optradio">Yes</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label><input type="radio" name="optradio">No</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="fpl-addisk-select">Number of Additional Disks</label>
+                                    <select class="form-control" id="fpl-addisk-select">
+                                        <option selected="" value="--">--</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="fpl-data-row" class="row">
+                                <div class="col-md-3">
+                                <label for="fpl-data-select">Data Replication</label>
+                                    <select class="form-control" id="fpl-data-select">
+                                        <option selected="" value="Select...">Select...</option>
+                                            <option value="Remote - RECOVERPOINT">Remote - RECOVERPOINT</option>
+                                    </select>
+                                </div>
+                            </div>
+                        <div id="fpl-servfun-row" class="row">
+                                <div class="col-md-3">
+                                    <label for="fpl-sfun-select">Server Function </label>
+                                    <select class="form-control" id="fpl-sfun-select" onchange="serverfunc_onchange()">
+                                        <option selected="" value="Select...">Select...</option>
+                                            <option value="APPLICATION">APPLICATION</option>
+                                            <option value="DATABASE">DATABASE</option>
+                                            <option value="DOMAIN CONTROLLER">DOMAIN CONTROLLER</option>
+                                            <option value="ESX">ESX</option>
+                                            <option value="FILE PRINT">FILE PRINT</option>
+                                            <option value="WEB SERVER">WEB SERVER</option>
+                                    </select>
+                                    <label for="fpl-serverusg-select">Server Usage</label>
+                                    <select class="form-control" id="fpl-serverusg-select">
+                                        <option selected="" value="Select...">Select...</option>
+                                        <option value="SERV_MFRAME">SERV_MFRAME</option>
+                                        <option value="SERV_MFRAME_DR">SERV_MFRAME_DR</option>
+                                        <option value="SERV_PGD_CTRL">SERV_PGD_CTRL</option>
+                                        <option value="SERV_PROD">SERV_PROD</option>
+                                        <option value="SERV_SCC_CTRL">SERV_SCC_CTRL</option>
+                                        <option value="SERV_TEST">SERV_TEST</option>
+                                        <option value="SERV_TEST_DEV">SERV_TEST_DEV</option>
+                                        <option value="SERV_DEV_DR">SERV_DEV_DR</option>
+                                        <option value="SERV_TEST_DR">SERV_TEST_DR</option>
+                                        <option value="SERV_XTRA">SERV_XTRA</option>
+                                    </select>
+                                    <label for="fpl-path-select">Patch Category</label>
+                                    <select class="form-control" id="fpl-path-select">
+                                        <option value="Select...">Select...</option>
+                                    </select>
+                                    <label for="fpl-autoreboot-select">Autoreboot Window </label>
+                                    <select class="form-control" id="fpl-autoreboot-select">
+                                        <option selected="" value="Select...">Select...</option>
+                                        <option value="** SRV NOREBOOT">** SRV NOREBOOT</option>
+                                        <option value="** LFO_SRV_AT-WILL_1DAYFORCEREBOOT">** LFO_SRV_AT-WILL_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_FRIDAY_3AM-5AM_1DAYFORCEREBOOT">** LFO_SRV_FRIDAY_3AM-5AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_FRIDAY_5AM-6AM_1DAYFORCEREBOOT">** LFO_SRV_FRIDAY_5AM-6AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_FRIDAY_7PM-12AM_1DAYFORCEREBOOT">** LFO_SRV_FRIDAY_7PM-12AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_MONDAY_3AM-5AM_1DAYFORCEREBOOT">** LFO_SRV_MONDAY_3AM-5AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_NOREBOOT_DD">** LFO_SRV_NOREBOOT_DD</option>
+                                        <option value="** LFO_SRV_SATURDAY_1AM-3AM_1DAYFORCEREBOOT">** LFO_SRV_SATURDAY_1AM-3AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_SUNDAY_1AM-3AM_1DAYFORCEREBOOT">** LFO_SRV_SUNDAY_1AM-3AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_SUNDAY_4AM-6AM_1DAYFORCEREBOOT">** LFO_SRV_SUNDAY_4AM-6AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_THURSDAY_3AM-5AM_1DAYFORCEREBOOT">** LFO_SRV_THURSDAY_3AM-5AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_TUESDAY_3AM-5AM_1DAYFORCEREBOOT">** LFO_SRV_TUESDAY_3AM-5AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_TUESDAY_7PM-12AM_1DAYFORCEREBOOT">** LFO_SRV_TUESDAY_7PM-12AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_WEDNESDAY_1AM-3AM_1DAYFORCEREBOOT">** LFO_SRV_WEDNESDAY_1AM-3AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_WEDNESDAY_3AM-5AM_1DAYFORCEREBOOT">** LFO_SRV_WEDNESDAY_3AM-5AM_1DAYFORCEREBOOT</option>
+                                        <option value="** LFO_SRV_WEDNESDAY_7PM-12AM_1DAYFORCEREBOOT">** LFO_SRV_WEDNESDAY_7PM-12AM_1DAYFORCEREBOOT</option>
+                                        <option value="** SRV FRIDAY 11AM-1PM">** SRV FRIDAY 11AM-1PM</option>
+                                        <option value="** SRV FRIDAY 3AM-5AM">** SRV FRIDAY 3AM-5AM</option>
+                                        <option value="** SRV FRIDAY 5AM-6AM">** SRV FRIDAY 5AM-6AM</option>
+                                        <option value="** SRV FRIDAY 7PM-12AM">** SRV FRIDAY 7PM-12AM</option>
+                                        <option value="** SRV MONDAY 11AM-1PM">** SRV MONDAY 11AM-1PM</option>
+                                        <option value="** SRV MONDAY 3AM-5AM">** SRV MONDAY 3AM-5AM</option>
+                                        <option value="** SRV SATURDAY 1AM-3AM">** SRV SATURDAY 1AM-3AM</option>
+                                        <option value="** SRV SATURDAY 4AM-6AM">** SRV SATURDAY 4AM-6AM</option>
+                                        <option value="** SRV SUNDAY 1AM-3AM">** SRV SUNDAY 1AM-3AM</option>
+                                        <option value="** SRV SUNDAY 4AM-6AM">** SRV SUNDAY 4AM-6AM</option>
+                                        <option value="** SRV SUNDAY 6AM-8AM">** SRV SUNDAY 6AM-8AM</option>
+                                        <option value="** SRV SUNDAY 8AM-10AM">** SRV SUNDAY 8AM-10AM</option>
+                                        <option value="** SRV SUNDAY 8PM-10PM">** SRV SUNDAY 8PM-10PM</option>
+                                        <option value="** SRV THURSDAY 11AM-1PM">** SRV THURSDAY 11AM-1PM</option>
+                                        <option value="** SRV THURSDAY 3AM-5AM">** SRV THURSDAY 3AM-5AM</option>
+                                        <option value="** SRV THURSDAY 4PM-6PM">** SRV THURSDAY 4PM-6PM</option>
+                                        <option value="** SRV THURSDAY 5AM-6AM">** SRV THURSDAY 5AM-6AM</option>
+                                        <option value="** SRV THURSDAY 8PM-10PM">** SRV THURSDAY 8PM-10PM</option>
+                                        <option value="** SRV TUESDAY 11AM-1PM">** SRV TUESDAY 11AM-1PM</option>
+                                        <option value="** SRV TUESDAY 3AM-5AM">** SRV TUESDAY 3AM-5AM</option>
+                                        <option value="** SRV WEDNESDAY 11AM-1PM">** SRV WEDNESDAY 11AM-1PM</option>
+                                        <option value="** SRV WEDNESDAY 3AM-5AM">** SRV WEDNESDAY 3AM-5AM</option>
+                                        <option value="** SRV WEDNESDAY 3AM-5AM_1DAYFORCEREBOOT">** SRV WEDNESDAY 3AM-5AM_1DAYFORCEREBOOT</option>
+                                        <option value="** SRV_APPLNCE">** SRV_APPLNCE</option>
+                                        <option value="** SRV_CORPSEC_ONGUARD">** SRV_CORPSEC_ONGUARD</option>
+                                        <option value="** SRV_LFO_ASPECTPDS_NOREBOOT">** SRV_LFO_ASPECTPDS_NOREBOOT</option>
+                                        <option value="** SRV_OPTION1_AT-WILL_1DAYFORCEREBOOT">** SRV_OPTION1_AT-WILL_1DAYFORCEREBOOT</option>
+                                        <option value="** SRV_OPTION1_NOREBOOT">** SRV_OPTION1_NOREBOOT</option>
+                                        <option value="** SRV_OPTION2_AT-WILL_1DAYFORCEREBOOT">** SRV_OPTION2_AT-WILL_1DAYFORCEREBOOT</option>
+                                        <option value="** SRV_OPTION2_NOREBOOT">** SRV_OPTION2_NOREBOOT</option>
+                                        <option value="** SRV_UNASSIGNED">** SRV_UNASSIGNED</option>
+                                    </select>
+                                    <label for="fpl-addinst-txt">Additional Instructions</label>
+                                    <textarea class="form-control" rows="5" id="fpl-addinst-txt"></textarea>
+                                    </div>
+                                     <div class="col-md-3">
+                                         <label for="fpl-dbplat-select" id="fpl-dbplat-lbl">Database Platform</label>
+                                        <select class="form-control" id="fpl-dbplat-select">
+                                            <option selected="" value="Select...">Select...</option>
+                                            <option value="Microsoft SQL Server Enterprise">Microsoft SQL Server Enterprise</option>
+                                            <option value="Microsoft SQL Server Standard">Microsoft SQL Server Standard</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="row" id="fpl-firewal-row">
+                                <div class="col-md-3">
+                                    <div><lable>Are firewall rules needed?</lable></div>
+                                    <div class="radio">
+                                    <label><input type="radio" name="optradio">Yes</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label><input type="radio" name="optradio">No</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="fpl-rules-sel">Numbers of Rules</label>
+                                    <select class="form-control" id="fpl-rules-sel">
+                                            <option selected="" value="--">--</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>                                    
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row"  id="fpl-location-row">
+                                    <div class="col-md-3">
+                                    <div><lable>Location Type</lable></div>
+                                    <div class="radio">
+                                    <label><input type="radio" name="optltradio">Virtual</label>
+                                    </div>
+                                    <div class="radio">
+                                    <label><input type="radio" name="optltradio">DataCenter</label>
+
+                                    <label for="fpl-compreq-sel">Building Location</label>
+                                    <select class="form-control" id="fpl-compreq-sel">
+                                            <option selected="" value="Select...">Select...</option>
+                                            <option value="/GO/RM NOT APPLICABLE/">/GO/RM NOT APPLICABLE/</option>
+                                            <option value="/JB/RM NOT APPLICABLE/">/JB/RM NOT APPLICABLE/</option>
+                                            <option value="/LCD/RM NOT APPLICABLE/">/LCD/RM NOT APPLICABLE/</option>                               
+                                        </select>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 sidebar">
+                             <label>Estimated Cost</label>
+                           
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab maxime fugiat perspiciatis.</p>
+                           
+                        </div>
+                    </div>
+                 </div>
+                </div>
+            </div>
+             <div class="panel panel-default">
+                <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" class="clickable" href="#collapse2"><i class="glyphicon glyphicon-chevron-up"></i></a><Span>General Information</Span>
+                </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                       <div class="row">
+                           <div class="col-md-3">
+                                <label for="fpl-req-input">Requestor</label>
+                                <input type="text" class="form-control" id="fpl-req-input">
+                                <label for="fpl-bu-input">Business Unit</label>
+                                <input type="text" class="form-control" id="fpl-bu-input">
+                            </div> 
+                           <div class="col-md-3">
+                                <label for="fpl-cust-input">Customer</label>
+                                <input type="text" class="form-control" id="fpl-cust-input">
+                                <label for="fpl-apgr-input">Application Group</label>
+                                <input type="text" class="form-control" id="fpl-apgr-input">
+                           </div>
+                       </div>
+                       <div class="row">
+                           <div class="col-md-3">
+                           <label for="fpl-apnm-input">Application Name</label>
+                                <input type="text" class="form-control" id="fpl-apnm-input">
+                                  </div>
+                       </div>
+                       <div class="row">
+                           <div class="col-md-3">
+                                <label for="fpl-apcrit-sel">Application Criticality</label>
+                                 <select class="form-control" id="fpl-apcrit-sel">
+                                    <option selected="" value="Select...">Select...</option>
+                                    <option value="None">None</option>
+                                    <option value="Business Unit Important">Business Unit Important</option>
+                                    <option value="Business Unit Other">Business Unit Other</option>
+                                    <option value="Mission Critical">Mission Critical</option>                                 
+                                </select>
+                                <label for="fpl-compreq-sel">Compliance Requirement</label>
+                               <select class="form-control" id="fpl-compreq-sel">
+                                    <option selected="" value="Select...">Select...</option>
+                                    <option value="DMZ">DMZ</option>
+                                    <option value="NERC">NERC</option>
+                                    <option value="NPI">NPI</option>
+                                    <option value="Sarbanes-Oxley">Sarbanes-Oxley</option>
+                                    <option value="None">None</option>                                 
+                                </select>
+                            </div> 
+                           <div class="col-md-3">
+                                <label for="fpl-appven-input">Application Vendor</label>
+                                <input type="text" class="form-control" id="fpl-appven-input">
+                               
+                           </div>
+                       </div>
+                      
+                       <div class="row">
+
+                           <div class="col-md-3">
+                                <label for="fpl-intord-input">Internal Order (IO) Number</label>
+                                <input type="text" class="form-control" id="fpl-intord-input">
+                                
+                            </div> 
+                           <div class="col-md-4">
+                                <label for="fpl-budown-input">Internal Order (IO) Budget Owner</label>
+                                <input type="text" class="form-control" id="fpl-budown-input">                               
+                           </div>
+                       </div>
+                </div>
+               
+                </div>
+            </div>
+        </div>
+        
+</div> 
+
+    </div> 
+   
+</div>
+<footer class="page-footer blue center-on-small-only fpl-footer">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-6">
+                <h5 class="title">Footer Content</h5>
+                <p>This is for the footer content.</p>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-md-6">
+                <h5 class="title">Links</h5>
+                <ul>
+                    <li><a href="#!">Link 1</a></li>
+                    <li><a href="#!">Link 2</a></li>
+                    <li><a href="#!">Link 3</a></li>
+                    <li><a href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2017 Copyright: <a href="https://www.fpl.com"> FPL </a>
+
+        </div>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+
+
+</div>
+<script>
+
+$(document).on('click', '.panel-heading a.clickable', function(e){
+    var $this = $(this);
+	if(!$this.hasClass('panel-collapsed')) {
+		//$this.parents('.panel').find('.panel-body').slideUp();
+		$this.addClass('panel-collapsed');
+		$this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+	} else {
+		//$this.parents('.panel').find('.panel-body').slideDown();
+		$this.removeClass('panel-collapsed');
+		$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+	}
+})
+
+
+$(document).ready(function() {
+
+        $('#fpl-os-row').hide();
+        $('#fpl-vdir').hide();
+        $('#fpl-ip-row').hide();
+        $('#fpl-disk-row').hide();
+        $('#fpl-data-row').hide();
+        $('#fpl-firewal-row').hide();
+        $('#fpl-location-row').hide();
+        $('#fpl-vlan-row').hide();
+        $('#fpl-vd-lbl').hide();
+        $('#fpl-vdnt-input').hide();
+        $('#fpl-seg-lbl').hide();
+        $('#fpl-segvlan-input').hide();
+         $('#fpl-servfun-row').hide();
+        $('#fpl-dbplat-lbl').hide();
+       $('#fpl-dbplat-select').hide();
+
+    $('input[type=radio][name=fpl-plat-radio]').change(function() {
+        if (this.value == 'Virtual') {
+            $('#fpl-os-row').show();          
+        }
+        else if (this.value == 'Physical') {
+                hidecompute(); 
+                 $('#fpl-os-row').hide();        
+          
+        }
+    });
+});
+
+function hidecompute()
+{
+     $('#fpl-vdir').hide();
+     $('#fpl-vlan-row').hide();
+        $('#fpl-ip-row').hide();
+        $('#fpl-disk-row').hide();
+        $('#fpl-data-row').hide();
+        $('#fpl-firewal-row').hide();
+        $('#fpl-location-row').hide();
+         $('#fpl-seg-lbl').hide();
+        $('#fpl-segvlan-input').hide();
+         $('#fpl-vd-lbl').hide();
+       $('#fpl-vdnt-input').hide();
+       $('#fpl-seg-lbl').hide();
+       $('#fpl-segvlan-input').hide();
+        $('#fpl-servfun-row').hide();
+}
+
+function showCompute()
+{
+        $('#fpl-vdir').show();
+         $('#fpl-vlan-row').show();
+        $('#fpl-ip-row').show();
+        $('#fpl-disk-row').show();
+        $('#fpl-data-row').show();
+        $('#fpl-firewal-row').show();
+        $('#fpl-location-row').show();
+         $('#fpl-servfun-row').show();
+}
+
+function os_onchange()
+{
+    var osvalue = document.getElementById("fpl-os-sel").value;
+    if(osvalue !== "Select...")
+    {
+        $('#fpl-os-selver').removeAttr("disabled");
+        
+    }
+    else
+    {
+       $('#fpl-os-selver').addAttr("disabled"); 
+    }
+}
+
+ function osversion_onchange()
+ {
+    var osverionvalue = document.getElementById("fpl-os-selver").value;
+    if(osverionvalue !== "Select...")
+    {
+        showCompute();
+        
+    }
+    else
+    {
+       hidecompute();
+    }
+ }
+function virtualdatacenters_onchnage()
+{
+    var vdvalue = document.getElementById("fpl-vdata-sel").value;
+    if(vdvalue === "Other")
+    {
+       $('#fpl-vd-lbl').show();
+       $('#fpl-vdnt-input').show();
+     
+    }
+    else
+    {
+       $('#fpl-vd-lbl').hide();
+       $('#fpl-vdnt-input').hide();
+    
+    }
+}
+
+function nlan_onchnage()
+{
+    var lanvalue = document.getElementById("fpl-vlan-sel").value;
+    if(lanvalue === "Other")
+    {
+     
+       $('#fpl-seg-lbl').show();
+       $('#fpl-segvlan-input').show();
+    }
+    else
+    {
+    
+       $('#fpl-seg-lbl').hide();
+       $('#fpl-segvlan-input').hide();
+    }
+}
+
+function serverfunc_onchange()
+{
+     var sfunvalue = document.getElementById("fpl-sfun-select").value;
+    if(sfunvalue === "DATABASE")
+    {
+     
+       $('#fpl-dbplat-lbl').show();
+       $('#fpl-dbplat-select').show();
+    }
+    else
+    {
+    
+       $('#fpl-dbplat-lbl').hide();
+       $('#fpl-dbplat-select').hide();
+    }
+    
+}
+
+</script>
+</body>
+
+</html>
+
