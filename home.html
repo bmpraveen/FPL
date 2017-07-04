@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Past Requests</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <script src="css/dataTables.bootstrap.css"></script> 
+    <script src="js/jquery.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="fpl-container">
+
+<div class="fpl-logo">
+   
+    <img src="images/logo.png"/>
+    <span class="fpl-portaltitle">Server Request Portal</span>
+ 
+</div>
+ 
+<div>
+<nav class="navbar navbar-default fpl-navbar">
+<div class="container-fluid">
+    <div class="navbar-header">
+    
+    </div>
+    <ul class="nav navbar-nav">
+    <li  class="fpl-navbar-first"><a href="#" class="fpl-nav-item">Home</a></li>
+    <li><a href="#" class="fpl-nav-item">Request a Server</a></li>
+    <li><a href="pastrequest.html" class="fpl-nav-item">Past Requests</a></li>
+    <li><a href="approval.html" class="fpl-nav-item">Approvals</a></li>
+    </ul>
+</div>
+</nav>
+</div>
+    
+
+
+<div class="row" style="margin-left: 30px; margin-bottom: 10px">
+   
+    <div class="col-md-10">
+    <span class="fpl-home-title">My Latest Requests</span>
+   
+<table id="fpl-pastreq-tbl" class="table fpl-app-tbl table-hover" cellspacing="0" width="100%">
+  <thead>
+    <tr>     
+        <th>Server Name</th>
+        <th>Type</th>
+        <th>Application</th>
+        <th>VRA ID</th>
+        <th>Status</th>
+        <th>Date Submitted</th>           
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#">GSOX7364</a></td>
+      <td>Production</td>       
+      <td>[application Name]</td>
+      <td>XXXXXXXXXX</td>
+      <td>Pending</td>
+      <td>Yesterday</td>
+ 
+    </tr>
+    <tr>   
+     
+      <td><a href="#">JBXSA9999</a></td>
+      <td>Testing</td>  
+      <td>[application Name]</td>
+      <td>XXXXXXXXXX</td>
+       <td>Approved</td>
+      <td>Two days ago</td>
+  
+    </tr>
+    <tr>
+      <td><a href="#">ORLSA1999</a></td>
+        <td>Development</td> 
+        <td>[application Name]</td>
+        <td>XXXXXXXXXX</td>
+        <td>Rejected</td>
+        <td>June 6</td>
+    
+    </tr>
+    <tr>
+        <td><a href="#">GOXSD1234</a></td>
+        <td>Disaster Recovery</td>      
+        <td>[application Name]</td>
+        <td>XXXXXXXXXX</td>
+        <td>Approved</td>
+        <td>June 2</td>
+
+    </tr>  
+  </tbody>
+</table>
+ <span class="fpl-hmviewall">View All </span>
+</div> 
+   
+</div>
+<div class="row" style="margin-left: 30px; margin-bottom: 10px">
+<div class="col-md-8">
+<span class="fpl-home-title">Awaiting Approval</span>
+   
+<table id="fpl-pastreq-tbl" class="table fpl-app-tbl table-hover" cellspacing="0" width="100%">
+  <thead>
+    <tr>     
+        <th>Requestor</th>  
+        <th>Application</th>     
+        <th>Date Submitted</th>  
+        <th>Cost</th>           
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark Smith</td>       
+      <td>[application Name]</td>
+      <td>May 16</td>
+      <td>$380</td> 
+    </tr>
+    <tr>
+      <td>Jen Thompson</td>       
+      <td>[application Name]</td>
+      <td>May 22</td>
+      <td>$1980</td> 
+    </tr>
+    <tr>
+      <td>Luis Gomez</td>       
+      <td>[application Name]</td>
+      <td>May 25</td>
+      <td>$770</td> 
+    </tr>
+    <tr>
+      <td>Sarah Jones</td>       
+      <td>[application Name]</td>
+      <td>May 26</td>
+      <td>$480</td> 
+    </tr>
+    <tr>
+      <td>Mark Smith</td>       
+      <td>[application Name]</td>
+      <td>May 28</td>
+      <td>$80</td> 
+    </tr>
+  </tbody>
+</table>
+ <span class="fpl-hmviewall">View All </span>
+    </div> 
+</div>
+<div class="row" style="margin-left: 30px; margin-bottom: 10px">
+  
+    <div class="col-md-3 fpl-home-border">
+        <div class="fpl-hmtitle-align"> <span class="fpl-home-title">FAQs</span></div>
+        <div><p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span></p></div>
+        <hr style="border-top: 1px solid #8c8b8b;">
+        <div><p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span></p></div>
+         <hr style="border-top: 1px solid #8c8b8b;">
+        <div><p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</span></p></div>
+        <span class="fpl-hmviewall">View All </span>
+    </div>
+    <div class="col-md-3 fpl-home-border">
+        <div class="fpl-hmtitle-align"> <span class="fpl-home-title">Quick Links</span></div>
+        <div><p><span>Excepteur sint occaecat</span></p></div>
+         <div><p><span>Excepteur sint occaecat</span></p></div>
+          <div><p><span>Excepteur sint occaecat</span></p></div>
+          <div><p><span>Excepteur sint occaecat</span></p></div>
+    </div>
+    <div class="col-md-3 fpl-home-border">
+        <div class="fpl-hmtitle-align"> <span class="fpl-home-title">Contacts</span></div>
+        <div>
+          <p><span>Excepteur sint occaecat</span></p>
+        </div>
+        <div>
+          <p><span>Excepteur sint occaecat</span></p>
+        </div>
+        <div>
+          <p><span>Excepteur sint occaecat</span></p>
+        </div>
+        <div>
+          <p><span>Excepteur sint occaecat</span></p>
+        </div>
+
+    </div>
+</div>
+
+<footer class="page-footer blue center-on-small-only fpl-footer">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-6">
+                <h5 class="title">Footer Content</h5>
+                <p>This is for the footer content.</p>
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+            <div class="col-md-6">
+                <h5 class="title">Links</h5>
+                <ul>
+                    <li><a href="#!">Link 1</a></li>
+                    <li><a href="#!">Link 2</a></li>
+                    <li><a href="#!">Link 3</a></li>
+                    <li><a href="#!">Link 4</a></li>
+                </ul>
+            </div>
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2017 Copyright: <a href="https://www.fpl.com"> FPL </a>
+
+        </div>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+
+
+</div>
+<script>
+$(document).ready(function() {
+    $('#fpl-pastreq-tbl').DataTable({       
+        "info":     false,
+        "searching": false,
+        "lengthChange": false,
+        "paging": false
+      
+    });
+    //$("#example_previous a")[0].innerHTML = "<";
+    //$("#example_next a")[0].innerHTML = ">";
+
+   //  $(".clickable-row").click(function() {
+    //    location.href = ($(this).data("href"));
+    //});
+ //$('#fpl-pastreq-tbl_paginate').remove().appendTo('#fpl-pastreq-tbl_wrapper');
+    //$('#fpl-pastreq-tbl_paginate').addClass("pull-right");
+} );
+ 
+  
+
+</script>
+</body>
+
+</html>
+

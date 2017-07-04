@@ -222,4 +222,158 @@ tfoot {
     border-style: solid;
  }
  
- 
+ .fpl-estimation{
+font-family:SegoeUI, "Segoe UI Normal", "Segoe UI";
+font-feature-settings:'kern' 1;
+font-kerning:normal;
+font-size:48px;
+font-style:normal;
+font-weight:normal;
+height:auto;
+line-height:normal;
+text-align:left;
+text-rendering:optimizeLegibility;
+white-space:nowrap;
+ }
+
+ .fpl-estimation-header{
+     color:rgb(102, 102, 102);
+display:inline;
+font-family:SegoeUI, "Segoe UI Normal", "Segoe UI";
+font-feature-settings:'kern' 1;
+font-kerning:normal;
+font-size:20px;
+font-style:normal;
+font-weight:normal;
+height:auto;
+line-height:normal;
+text-align:left;
+text-rendering:optimizeLegibility;
+white-space:nowrap;
+ }
+
+ .fpl-page-title{
+
+     color:rgb(102, 102, 102);
+display:inline;
+font-family:SegoeUI, "Segoe UI Normal", "Segoe UI";
+font-feature-settings:'kern' 1;
+font-kerning:normal;
+font-size:26px;
+font-style:normal;
+font-weight:normal;
+height:auto;
+line-height:normal;
+text-align:left;
+text-rendering:optimizeLegibility;
+white-space:nowrap;
+ }
+
+ .fpl-section-title{
+     color:rgb(102, 102, 102);
+display:inline;
+font-family:SegoeUI-Bold, "Segoe UI Negreta", "Segoe UI Normal", "Segoe UI";
+font-feature-settings:'kern' 1;
+font-kerning:normal;
+font-size:14px;
+font-style:normal;
+font-weight:bold;
+height:auto;
+line-height:normal;
+text-align:left;
+text-rendering:optimizeLegibility;
+white-space:nowrap;
+ }
+
+ .fpl-label{
+    color:rgb(102, 102, 102);
+display:inline;
+font-family:SegoeUI, "Segoe UI Normal", "Segoe UI";
+font-feature-settings:'kern' 1;
+font-kerning:normal;
+font-size:12px;
+font-style:normal;
+font-weight:normal;
+height:auto;
+line-height:normal;
+text-align:left;
+text-rendering:optimizeLegibility;
+visibility:visible;
+white-space:nowrap; 
+ }
+
+ .fpl-radio-label
+ {
+     color:rgb(134, 134, 134);
+     cursor:default;
+display:inline;
+font-family:SegoeUI, "Segoe UI Normal", "Segoe UI";
+font-feature-settings:'kern' 1;
+font-kerning:normal;
+font-size:14px;
+font-style:normal;
+font-weight:normal;
+height:auto;
+line-height:normal;
+text-align:left;
+text-rendering:optimizeLegibility;
+width:auto;
+word-wrap:break-word;
+ }
+
+ .required:after {
+    color: red;
+    content: '*';
+  
+}
+
+.fpl-home-border{
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(174, 174, 174, 1);
+    border-radius: 0px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+   
+}
+.fpl-home-title{
+    color:rgb(102, 102, 102);
+display:inline;
+font-family:SegoeUI, "Segoe UI Normal", "Segoe UI";
+font-feature-settings:'kern' 1;
+font-kerning:normal;
+font-size:24px;
+font-style:normal;
+font-weight:normal;
+height:auto;
+line-height:normal;
+text-align:left;
+text-rendering:optimizeLegibility;
+white-space:nowrap;
+
+}
+.fpl-hmtitle-align
+{
+padding-top: 10px;
+    padding-bottom: 10px;
+}
+.fpl-hmviewall{
+    color: rgb(52, 151, 214);
+    cursor: pointer;
+    display: inline;
+    font-family: SegoeUI, "Segoe UI Normal", "Segoe UI";
+    font-feature-settings: 'kern' 1;
+    font-kerning: normal;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    height: auto;
+    line-height: normal;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    white-space: nowrap;
+   
+
+}
